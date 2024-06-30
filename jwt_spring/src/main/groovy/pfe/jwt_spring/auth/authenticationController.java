@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pfe.jwt_spring.User.User;
 import pfe.jwt_spring.identification.Entities.*;
-import pfe.jwt_spring.identification.repository.MapRepository;
 import pfe.jwt_spring.identification.services.*;
 
 import java.util.List;
@@ -43,8 +42,7 @@ public class authenticationController {
             return ResponseEntity.notFound().build();
         }
     }
-    @Autowired
-    private MapRepository mapRepository;
+
     
     @PostMapping
     public ResponseEntity<Observation> createObservation(@RequestBody Observation observation) {

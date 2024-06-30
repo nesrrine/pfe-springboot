@@ -21,7 +21,6 @@ public class Commune {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
     @ManyToOne
     @JoinColumn(name = "delegation_id")
     @JsonBackReference
